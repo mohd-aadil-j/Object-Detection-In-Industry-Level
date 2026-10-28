@@ -1,0 +1,52 @@
+:root {
+  color: #17212b;
+  background: #eef2f5;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; border: 0; border-radius: 6px; padding: 0.7rem 1rem; background: #dce5eb; font-weight: 700; }
+button:disabled { cursor: not-allowed; opacity: 0.5; }
+.app-shell { max-width: 1180px; margin: 0 auto; padding: 2rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.eyebrow { color: #557080; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.35rem; }
+h1, h2 { margin-top: 0; }
+h1 { margin-bottom: 0; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+h2 { font-size: 1.1rem; }
+.state-pill { border-radius: 99px; padding: 0.55rem 0.9rem; font-weight: 800; font-size: 0.8rem; }
+.state-running { background: #d9f5e4; color: #13733e; }
+.state-paused { background: #fff1c7; color: #8a5c00; }
+.state-stopped { background: #e4e9ed; color: #4a5b66; }
+.control-panel, .card { background: #fff; border: 1px solid #d9e1e6; border-radius: 10px; padding: 1.25rem; box-shadow: 0 2px 8px #1833430b; }
+.control-panel { margin-bottom: 1rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.button-primary { background: #1769aa; color: #fff; }
+.button-danger { background: #fbe0e0; color: #a52c2c; }
+.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+form { display: grid; gap: 0.9rem; }
+label { display: grid; gap: 0.35rem; font-size: 0.85rem; font-weight: 700; color: #405563; }
+input { width: 100%; border: 1px solid #bccbd4; border-radius: 6px; padding: 0.7rem; color: #17212b; background: #fff; }
+small { font-weight: 400; color: #6a7d88; }
+.result { border-radius: 8px; padding: 1.2rem; }
+.result strong { font-size: 1.8rem; }
+.result-pass { background: #d9f5e4; color: #13733e; }
+.result-rework { background: #fff1c7; color: #8a5c00; }
+.result-inspection_error { background: #fbe0e0; color: #a52c2c; }
+.empty-state, .message { color: #6a7d88; }
+.settings-card { margin-top: 1rem; }
+.history-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.button-link { background: #dce5eb; border-radius: 6px; color: #17212b; font-weight: 700; padding: 0.7rem 1rem; text-decoration: none; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { border-bottom: 1px solid #e1e7eb; padding: 0.7rem; text-align: left; white-space: nowrap; }
+th { color: #557080; font-size: 0.75rem; text-transform: uppercase; }
+.settings-form { grid-template-columns: 1.2fr 2fr 1fr 1fr auto; align-items: end; }
+.settings-form button { height: fit-content; }
+@media (max-width: 800px) {
+  .app-shell { padding: 1rem; }
+  .content-grid, .settings-form { grid-template-columns: 1fr; }
+  .topbar { align-items: flex-start; gap: 1rem; }
+  .history-heading { align-items: flex-start; flex-direction: column; }
+}
